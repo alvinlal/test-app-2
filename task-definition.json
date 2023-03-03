@@ -1,0 +1,53 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "test-app-2",
+      "image": "732313143489.dkr.ecr.me-south-1.amazonaws.com/test-app-2:1.0.0",
+      "cpu": 0,
+      "links": [],
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "entryPoint": [],
+      "command": [],
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "secrets": [],
+      "dnsServers": [],
+      "dnsSearchDomains": [],
+      "extraHosts": [],
+      "dockerSecurityOptions": [],
+      "dockerLabels": {},
+      "ulimits": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "test-app-logs",
+          "awslogs-region": "me-south-1",
+          "awslogs-stream-prefix": "test-app-2-service"
+        },
+        "secretOptions": []
+      },
+      "systemControls": []
+    }
+  ],
+  "family": "ecs-with-autoscaling-TestApp2TaskDefinition-pgr9SBTD7osq",
+  "executionRoleArn": "arn:aws:iam::732313143489:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "volumes": [],
+  "placementConstraints": [],
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024"
+}
